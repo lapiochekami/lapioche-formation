@@ -139,3 +139,64 @@ div.texte-avec-ligne-verticale {
     height: 100px;
     display: inline-block;
 }
+
+/* Ajout de la media query pour écrans de moins de 768px */
+@media (max-width: 768px) {
+
+    /* Adapter la taille du texte */
+    h1 {
+        font-size: 40px;
+    }
+
+    div.quote,
+    div.intro,
+    div.help {
+        font-size: 20px;
+        margin: 10px; /* Réduire les marges */
+    }
+
+    /* Ajuster la taille et l'alignement du logo */
+    img.cover-logo {
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    /* Réduire la hauteur des images de fond */
+    div.cover {
+        height: 300px;
+    }
+
+    div.cell-background {
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Centrer et réduire les images dans le container */
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 100px; /* Augmenter légèrement la taille des images */
+        margin: 10px 0;
+    }
+
+    /* Disposition en colonne pour le tableau des tarifs */
+    table {
+        width: 100%;
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table td {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
