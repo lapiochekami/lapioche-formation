@@ -44,6 +44,11 @@ body {
     margin: 0;
   }
 
+iframe {
+    width: 100%;
+    height: 50vh; /* Ajuste cette valeur pour obtenir la hauteur désirée */
+    border: none;
+}
 
   h1 {
     font-size: 60px;    
@@ -124,7 +129,19 @@ div.frame {
     display: block;
 }
 
+div.cell1 {
+    width: 70%;
+}
 
+td.cell2 {
+    width: 15%;
+    background-color: rgb(161, 225, 199) !important;
+}
+
+td.cell3 {
+    width: 15%;
+    background-color: rgb(161, 173, 225) !important;
+}
 
 p.frame-title {
     font-size: 30px;
@@ -141,25 +158,25 @@ div.texte-avec-ligne-verticale {
 }
 
 /* Ajout de la media query pour écrans de moins de 768px */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     /* Adapter la taille du texte */
     h1 {
-        font-size: 20px;
+        font-size: 40px;
     }
 
     div.quote,
     div.intro,
     div.help {
-        font-size: 10px;
+        font-size: 20px;
         margin: 5px; /* Réduire les marges */
     }
 
     /* Ajuster la taille et l'alignement du logo */
     img.cover-logo {
-        height: 150px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 70px;
+        text-align: center;
+        margin-bottom: 5px;
         display: inline-block;
     }
 
@@ -168,19 +185,27 @@ div.texte-avec-ligne-verticale {
         height: 300px;
     }
 
+    div.padding {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     div.cell-background {
         height: auto;
-        padding: 20px;
+        padding: 10px;
+        margin-top: -60px;
     }
 
     /* Centrer et réduire les images dans le container */
     .image-container {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between; /* Pour aligner les images à gauche, au centre et à droite */
         align-items: center;
+        margin: 10px;
+        padding: 20px;
     }
 
     .image {
-        width: 100px; /* Augmenter légèrement la taille des images */
+        width: 50px; /* Augmenter légèrement la taille des images */
         margin: 10px 0;
     }
 
@@ -198,5 +223,49 @@ div.texte-avec-ligne-verticale {
     table td {
         width: 100%;
         margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    div.frame { 
+        width: 100%;
+        display: flex;
+        padding: 10px;
+    }
+
+    div.cell1 {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    td.cell2 {
+        width: 100%;
+        background-color: rgb(161, 225, 199) !important;
+        display: inline;
+    }
+    
+    td.cell3 {
+        width: 100%;
+        background-color: rgb(161, 173, 225) !important;
+        display: inline;
+    }
+    td.cell2 ul li, 
+    td.cell3 ul li {
+        margin: 10px 0; /* Ajuste cette valeur pour réduire l'écart */
+        padding: 0;
+        font-size: 20px;
+    }
+    p.frame-title {
+        font-size: 20px;
+        display: flex;
+    }
+
+    div.texte-avec-ligne-verticale {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 439px) {
+    img {
+        display: none; /* Masque l'image si la largeur de l'écran est inférieure à 439px */
     }
 }
