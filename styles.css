@@ -145,14 +145,14 @@ div.texte-avec-ligne-verticale {
 
     /* Adapter la taille du texte */
     h1 {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     div.quote,
     div.intro,
     div.help {
-        font-size: 20px;
-        margin: 10px; /* Réduire les marges */
+        font-size: 10px;
+        margin: 5px; /* Réduire les marges */
     }
 
     /* Ajuster la taille et l'alignement du logo */
@@ -160,7 +160,7 @@ div.texte-avec-ligne-verticale {
         height: 150px;
         margin-left: auto;
         margin-right: auto;
-        display: block;
+        display: inline-block;
     }
 
     /* Réduire la hauteur des images de fond */
