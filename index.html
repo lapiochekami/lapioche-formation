@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pioche</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajoute des styles pour l'iframe */
+        iframe {
+            width: 100%; 
+            height: 200px; 
+            border: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <br/>
+        <br/>
+        <br/>
+        <h1>Maîtrisez <span style="color: #2aaf70;">Excel</span> comme un Chef !</h1>
+        <img class="cover-logo" src="La piochev3.png"/>
+    </div>
+    <div class = "mountain">
+    </div>
+    <div class = "padding">
+        <div class="quote">
+            <div class="quote fade-in">
+                <p>Excel est le logiciel de gestion de données <u>le plus utilisé</u> en entreprise en ce qui concerne le traitement de données.<br> C 'est <span style="color: #2aaf70;">le tableur</span> le plus connu,<br> Et vous avez tout intérêt à <b>le maîtriser.</b></p>
+            </div>
+        </div>
+    </div>
+    <hr width="50%" />  
+    <div class="cell-background">
+        <ul>
+            <div class ="intro fade-in">
+                <li>Que vous soyez un grand débutant qui a peur de ce logiciel tout vert,</li>
+                <li>Que vous souhaitez seulement améliorer votre niveau pour plus d'efficacité,</li>
+                <li>Ou bien simplement apprendre un module en particulier... (VBA, TCD, Graphiques)</li>
+                <br>
+            </div>
+            <div class = "help fade-in">
+                <b><p>Je peux vous aider !</p></b>
+            </div>
+        </ul>
+        <div class="image-container">
+            <img src="img1.png" alt="Image 1" class="fade-in image" id="img1">
+            <img src="img2.png" alt="Image 2" class="fade-in image" id="img2">
+            <img src="img3.png" alt="Image 3" class="fade-in image" id="img3">
+        </div>
+    </div>
+    <div class="padding">
+        </div>
+        <table style="width: 100%; border: none;">
+            <tr>
+                <td style="width: 70%;"><iframe src="contact-frame.html" scrolling="no"></iframe></td>
+
+                <td style="width: 15%; background-color: rgb(161, 225, 199);">
+                    <ul>
+                        <li>Cours Individuel</li>
+                        <li>Cours > 3 élèves ou +</li>
+                        <li>Cours > 5 élèves ou +</li>
+                        <br>
+                    </ul>
+                </td>
+                <td style="width: 15%; background-color:rgb(161, 173, 225);">
+                    <ul>
+                        <li>25 €/heure*</li>
+                        <li>20 €/heure*</li>
+                        <li>15 €/heure*</li>
+                    </ul>
+                    <p> <i>*Tarif par personne </i></p>
+                </td>
+
+            </tr>
+        </table>
+        
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            var elements = document.querySelectorAll('.fade-in');
+            elements.forEach(function(element) {
+                var position = element.getBoundingClientRect();
+                if (position.top < window.innerHeight && position.bottom >= 0) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var images = document.querySelectorAll('.image');
+
+            images.forEach(function(image, index) {
+                setTimeout(function() {
+                    image.style.opacity = '1';
+                }, index * 1000); // 1 seconde d'intervalle entre chaque image
+            });
+        });
+    </script>
+</body>
+
+</html>
